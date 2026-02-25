@@ -17,6 +17,10 @@ aerospace.toml      → ~/.config/aerospace/aerospace.toml
 install.sh          sets up all symlinks
 ```
 
+## Setup
+
+After cloning, run `./install.sh` to symlink configs and install TPM plugins.
+
 ## Adding a new config
 
 1. Place the config file in this repo.

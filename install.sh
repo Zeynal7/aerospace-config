@@ -32,10 +32,13 @@ link_file "$DOTFILES_DIR/aerospace.toml" "$HOME/.config/aerospace/aerospace.toml
 echo "==> Installing TPM (if not present)"
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
-  echo "  TPM installed — press prefix + I inside tmux to install plugins"
+  echo "  TPM installed"
 else
   echo "  TPM already installed"
 fi
+
+echo "==> Installing TPM plugins"
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"
 
 echo ""
 echo "Done! Restart tmux or run:  tmux source-file ~/.tmux.conf"
